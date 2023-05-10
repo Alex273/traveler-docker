@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "module": "esnext",
+    "target": "es2017",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "checkJs": false,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "rootDirs": [
+      "./src"
+    ],
+    "paths": {
+      "@app/*": [
+        "./src/app/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@widgets/*": [
+        "./src/widgets/*"
+      ],
+      "@features/*": [
+        "./src/features/*"
+      ],
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+      "@components/*": [
+        "./src/shared/components/*"
+      ],
+      "@styles/*": [
+        "./src/app/styles/*"
+      ],
+    }
+  }
+}

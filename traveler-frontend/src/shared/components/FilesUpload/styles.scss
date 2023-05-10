@@ -1,0 +1,110 @@
+$max-image-size: 220px;
+$max-link-image-size: 100px;
+$max-link-image-height: 55px;
+$mui-unit: 8px;
+
+.files_upload__wrapper {
+    margin: $mui-unit;
+}
+
+.files_upload__image_place_holder {
+    background-color: #666;
+    display: block;
+    height: $max-image-size;
+    width: $max-image-size;
+}
+
+.files_upload__image {
+    border-radius: 4px;
+    display: block;
+    left: 50%;
+    max-height: $max-image-size;
+    max-width: $max-image-size;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.files_upload__link_image {
+    max-height: 100%;
+    max-width: $max-link-image-size;
+}
+
+.files_upload__input_wrapper {
+    background-color: #ccc;
+    background-image: url('./images/add-image.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    height: $max-image-size;
+    margin-bottom: $mui-unit * 2;
+    opacity: 0.5;
+    overflow: hidden;
+    position: relative;
+    transition: opacity 0.3s linear;
+    width: $max-image-size;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.files_upload__link_input_wrapper {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    text-decoration: underline;
+    width: $max-link-image-size;
+}
+
+.files_upload__input {
+    background-color: #c00;
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.files_upload__image_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: $mui-unit;
+}
+
+.files_upload__image_list_item {
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    height: $max-image-size;
+    margin-bottom: $mui-unit * 2;
+    position: relative;
+    width: $max-image-size;
+}
+
+.files_upload__link_image_list_item {
+    height: $max-link-image-height;
+    width: $max-link-image-size;
+}
+
+.files_upload__remove_image_button {
+    right: 0;
+    top: 0;
+    transform: translate(30%, -30%);
+    z-index: auto;
+
+    .files_upload__image_list_item & {
+        position: absolute;
+    }
+}
+
+.files_upload__preview_image {
+    max-height: 100%;
+    max-width: 100%;
+}

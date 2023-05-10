@@ -1,0 +1,47 @@
+$max-image-size: 220px;
+$mui-unit: 8px;
+
+.profile_photo {
+  display: flex;
+  position: relative;
+  border-radius: 4px;
+  height: $max-image-size;
+  margin-bottom: $mui-unit * 2;
+  width: $max-image-size;
+
+  img {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.profile_default_photo {
+  display: flex;
+  position: relative;
+  border-radius: 4px;
+  height: $max-image-size;
+  margin-bottom: $mui-unit * 2;
+  width: $max-image-size;
+  background-image: url('../../shared/assets/images/profile.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100px auto;
+}
+
+.profile_data_item {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.profile_data__item_label {
+  text-transform: uppercase;
+  font-size: var(--main-font-size);
+  width: 50px;
+  margin-right: 15px
+}
+
+.profile_data__item_value {
+  font-weight: bold;
+  font-size: 20px;
+}
