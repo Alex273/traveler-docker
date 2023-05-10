@@ -1,0 +1,112 @@
+{
+  "name": "traveler-backend",
+  "version": "1.0.0",
+  "description": "nest application",
+  "scripts": {
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint:fix": "eslint --ext .js,.ts, . --fix",
+    "lint": "eslint --ext .js,.ts, .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "alex",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs-modules/mailer": "^1.8.1",
+    "@nestjs/common": "^9.2.1",
+    "@nestjs/config": "^2.3.0",
+    "@nestjs/core": "^9.2.1",
+    "@nestjs/jwt": "^10.0.2",
+    "@nestjs/passport": "^9.0.3",
+    "@nestjs/platform-express": "^9.2.1",
+    "@nestjs/sequelize": "^9.0.0",
+    "argon2": "^0.30.3",
+    "cache-manager": "^5.1.7",
+    "cache-manager-redis-store": "^3.0.1",
+    "connect-redis": "^7.0.1",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "ioredis": "^5.2.6",
+    "multer": "^1.4.5-lts.1",
+    "node-cache-manager": "^1.2.0",
+    "nodemailer": "^6.9.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.8.0",
+    "redis": "^4.5.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "sequelize": "^6.28.0",
+    "sequelize-typescript": "^2.1.5"
+  },
+  "devDependencies": {
+    "@nestjs/schematics": "^9.0.4",
+    "@nestjs/testing": "^9.2.1",
+    "@types/cache-manager": "^4.0.2",
+    "@types/cache-manager-redis-store": "^2.0.1",
+    "@types/connect-redis": "^0.0.20",
+    "@types/express": "^4.17.16",
+    "@types/express-session": "^1.17.7",
+    "@types/ioredis": "^5.0.0",
+    "@types/jest": "^29.4.0",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^18.11.18",
+    "@types/nodemailer": "^6.4.7",
+    "@types/passport-jwt": "^3.0.8",
+    "@types/passport-local": "^1.0.35",
+    "@types/redis": "^4.0.11",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.4.1",
+    "module-alias": "^2.2.2",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.0.5",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "_moduleAliases": {
+    "@services": "src/services",
+    "@modules": "src/modules",
+    "@interfaces": "src/interfaces",
+    "@models": "src/models",
+    "@entities": "src/entities",
+    "@constants": "src/constants",
+    "@exceptions": "src/exceptions"
+  }
+}
